@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <form onsubmit="return false;" id="asana-csv-form">
+            <label>
+                Asana Tasks CSV:
+                <input id="csv-file" name="csv-file" type="file" accept="text/csv" required>
+            </label>
+            <input type="submit" value="Get Asana Info">
+        </form>
+    </div>
+    <div id="loader"></div>
+    <div>
+        <canvas id="task-chart"></canvas>
+    </div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="asana-csv.js"></script>
+</body>
+</html>
