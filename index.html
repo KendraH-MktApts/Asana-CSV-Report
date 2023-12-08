@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <form onsubmit="return false;" id="asana-csv-form">
+            <h2>Asana Report</h2>
+
+            <label>
+                Asana Tasks CSV:
+                <input id="csv-file" name="csv-file" type="file" accept="text/csv" required>
+            </label>
+            <input type="submit" value="Get Asana Info">
+        </form>
+
+        <form onsubmit="return false;" id="asana-comparison-form">
+            <h2>Comparison Report</h2>
+
+            <label>
+                First Asana Tasks CSV:
+                <input id="comparison-csv-1" name="comparison-csv-1" type="file" accept="text/csv" required>
+            </label>
+            <label>
+                First Asana Tasks Label:
+                <input id="comparison-label-1" name="comparison-label-1" type="text" required>
+            </label>
+            <br>
+
+            <label>
+                Second Asana Tasks CSV:
+                <input id="comparison-csv-2" name="comparison-csv-2" type="file" accept="text/csv" required>
+            </label>
+            <label>
+                Second Asana Tasks Label:
+                <input id="comparison-label-2" name="comparison-label-2" type="text" required>
+            </label>
+            <br>
+
+            <input type="submit" value="Get Comparison Report">
+        </form>
+    </div>
+    <div id="loader" style="margin-top:20px;"></div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <script src="asana-csv.js"></script>
+
+</body>
+</html>
